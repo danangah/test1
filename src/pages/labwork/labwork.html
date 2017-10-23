@@ -1,11 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      LabWork SI
+      <div text-center>
+        LabWork SI
+      </div>
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="signOut()">
+        <ion-icon name="power"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header><h6>Pengumuman Jadwal Praktikum</h6></ion-list-header>
+    <ion-list-header><h6>Pengumuman TP Praktikum</h6></ion-list-header>
+    <ion-list-header><h6>Pengumuman Laporan Praktikum</h6></ion-list-header>
+  </ion-list>
 
-<ion-content padding>
-	Home page
+  <ion-row class="logo-row">
+      <img width="250px" src="http://i.huffpost.com/gen/1713200/images/o-CLEAN-WATER-facebook.jpg"/>
+  </ion-row>
 </ion-content>

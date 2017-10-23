@@ -9,9 +9,27 @@ import { CekmodulPage } from '../pages/cekmodul/cekmodul';
 import { UnggahlaporanPage } from '../pages/unggahlaporan/unggahlaporan';
 import { CektpPage } from '../pages/cektp/cektp';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/loginpage/loginpage';
+import { SignupPage } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FirebaseProvider } from '../providers/firebase/firebase';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+// Import the AF2 Module
+import { AngularFireModule } from 'angularfire2';
+
+// AF2 Settings
+export const firebaseConfig = {
+  apiKey: "AIzaSyAWcs4zE0GqC_WJD4kxwxZbay7kSnrYFow",
+  authDomain: "labwork-si.firebaseapp.com",
+  databaseURL: "https://labwork-si.firebaseio.com",
+  projectId: "labwork-si",
+  storageBucket: "labwork-si.appspot.com",
+  messagingSenderId: "614001865833"
+};
+
 
 @NgModule({
   declarations: [
@@ -21,11 +39,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CekmodulPage,
     CektpPage,
     UnggahlaporanPage,
+    LoginPage,
+    SignupPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,12 +57,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CekmodulPage,
     CektpPage,
     UnggahlaporanPage,
+    LoginPage,
+    SignupPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FirebaseProvider
   ]
 })
 export class AppModule {}
