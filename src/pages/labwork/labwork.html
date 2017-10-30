@@ -15,6 +15,28 @@
 <ion-content>
   <ion-list>
     <ion-list-header><h6>Pengumuman Jadwal Praktikum</h6></ion-list-header>
+    addd
+    <!--<ul>
+      <li class="text" *ngFor="let data of datas | async">
+        <h2>Nama: {{data.$value}}</h2>
+        <h3>NIM: {{data.nim}}</h3>
+        <h3>ID: {{data.username}}</h3>
+      </li>
+    </ul>-->
+
+    <p class="text" *ngFor="let data of datas | async">
+      {{data.$value}}
+    </p>
+
+    <!--<ion-card
+         class="movie"
+         text-wrap
+         *ngFor="let data of datas | async">
+         <ion-item>
+            <h2>{{ data.nama }}</h2>
+         </ion-item>
+    </ion-card>-->
+
     <ion-list-header><h6>Pengumuman TP Praktikum</h6></ion-list-header>
     <ion-list-header><h6>Pengumuman Laporan Praktikum</h6></ion-list-header>
   </ion-list>
@@ -22,4 +44,38 @@
   <ion-row class="logo-row">
       <img width="250px" src="http://i.huffpost.com/gen/1713200/images/o-CLEAN-WATER-facebook.jpg"/>
   </ion-row>
+
+      <!--<ion-card
+         class="data"
+         text-wrap
+         *ngFor="let data of datas | async">
+         <ion-item>
+            <h2>{{ data.X.matkul.et2100.tp.tp1.deadline }}</h2>
+            <small>{{ data.X.nama }} ({{ data.X.nim }})</small>
+            <p>{{ data.X.username }}</p>
+            <p>tessss</p>
+
+
+            <section class="multiples">
+               <h3>Actors/Actresses</h3>
+         <ion-chip
+                *ngFor="let actor of movie.actors"
+                padding-left
+                padding-right
+                margin-right>{{ actor.name }}</ion-chip>
+            </section>
+
+
+            <section class="multiples">
+               <h3>Genres</h3>
+               <ion-chip
+                  *ngFor="let genre of movie.genres"
+                  padding-left
+                  padding-right
+                  margin-right>{{ genre.name }}</ion-chip>
+            </section>
+            
+
+         </ion-item>
+      </ion-card>-->
 </ion-content>

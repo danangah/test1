@@ -2,5 +2,7 @@
   "name": "tes1",
   "app_id": "5cb3ec0b",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
